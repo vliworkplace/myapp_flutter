@@ -16,6 +16,7 @@ class Quiz extends StatelessWidget {
       children: [
         Question(questions[questionIndex]['questionText']),
         //the ... will spread the list and add the item to children list
+        //the for, if and ... are not supported before flutter 2.3.0
         ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
             .map((answer) {
           //unname function use like (parma){ return}
